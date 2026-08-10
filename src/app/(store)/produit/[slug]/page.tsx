@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { SAMPLE_PRODUCTS, CATEGORIES, formatPrice } from '@/lib/data';
 import ProductPageClient from './ProductPageClient';
 
-const SITE_URL = 'https://istanbulmeubles.ne';
+const SITE_URL = 'https://istanbul-wc6a.onrender.com';
 
 export async function generateStaticParams() {
   return SAMPLE_PRODUCTS.map((p) => ({ slug: p.slug }));
