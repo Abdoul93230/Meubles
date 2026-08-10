@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { Search, Heart, ShoppingCart, User, ChevronDown, ChevronRight, X, Menu, Globe, Phone, MapPin } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 import { useCart } from '@/store/cart';
 import CartDrawer from './CartDrawer';
 
@@ -68,15 +69,8 @@ export default function Navbar() {
           <div className="flex items-center gap-3 h-[56px] md:h-[68px]">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-              <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
-                <path d="M8 32 L20 8 L32 32" stroke="var(--gold)" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 24 L28 24" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round"/>
-                <circle cx="20" cy="8" r="2.5" fill="var(--gold)"/>
-              </svg>
-              <span className="font-bold text-lg tracking-tight" style={{ color: 'var(--gold)', fontFamily: 'Georgia, serif' }}>
-                ISTANBUL<span className="font-light"> MEUBLES</span>
-              </span>
+            <Link href="/" className="flex-shrink-0">
+              <Logo size="sm" variant="dark" />
             </Link>
 
             {/* Search bar — desktop only */}
@@ -229,10 +223,8 @@ export default function Navbar() {
             {/* Header */}
             <div className="flex items-start justify-between px-5 pt-5 pb-4">
               <div>
-                <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-0.5">EXPLORER</p>
-                <p className="text-xl font-bold text-[var(--dark)]" style={{ fontFamily: 'Georgia, serif' }}>
-                  Istanbul Meubles
-                </p>
+                <p className="text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1.5">EXPLORER</p>
+                <Logo size="sm" variant="dark" />
               </div>
               <button
                 onClick={() => setMobileOpen(false)}

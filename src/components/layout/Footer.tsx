@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { MapPin, Mail } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   return (
@@ -9,15 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-1.5 mb-3">
-              <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
-                <path d="M8 32 L20 8 L32 32" stroke="var(--gold)" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                <path d="M12 24 L28 24" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round"/>
-                <circle cx="20" cy="8" r="2.5" fill="var(--gold)"/>
-              </svg>
-              <span className="font-bold text-base" style={{color:'var(--gold)', fontFamily:'Georgia, serif'}}>
-                ISTANBUL MEUBLES
-              </span>
+            <div className="mb-3">
+              <Logo size="sm" variant="dark" />
             </div>
             <p className="text-sm text-gray-600 leading-relaxed mb-4">
               Meubles, décoration et pièces artisanales pour les maisons à travers le Niger et la région.
